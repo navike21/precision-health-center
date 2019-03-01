@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Kiona Regular';
+  src: url("../fonts/Kiona-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Kiona-Regular.woff") format("woff"), url("../fonts/Kiona-Regular.ttf") format("truetype"), url("../fonts/Kiona-Regular.svg#Kiona-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadPro Bold';
+  src: url("../fonts/MyriadPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadPro-Bold.otf") format("opentype"), url("../fonts/MyriadPro-Bold.woff") format("woff"), url("../fonts/MyriadPro-Bold.ttf") format("truetype"), url("../fonts/MyriadPro-Bold.svg#MyriadPro-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadPro Regular';
+  src: url("../fonts/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadPro-Regular.otf") format("opentype"), url("../fonts/MyriadPro-Regular.woff") format("woff"), url("../fonts/MyriadPro-Regular.ttf") format("truetype"), url("../fonts/MyriadPro-Regular.svg#MyriadPro-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "MyriadPro Regular", sans-serif;
+}
+
+.backgroundColor_blue {
+  background-color: #1A78BD;
+}
+
+.backgroundColor_blueSky {
+  background-color: #D1E7F2;
+}
+
+.blueColor {
+  color: #2B388F;
+}
+
+.blueColor2 {
+  color: #1A78BD;
+}
+
+.fontTitle {
+  font-family: "Kiona Regular", sans-serif;
+}
+
+.fontBodyBold {
+  font-family: "MyriadPro Bold", sans-serif;
+}
+
+@media all and (min-width: 1px) {
+  .principalSlider {
+    background: url("../images/slider.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+  }
+  .captionSlider {
+    text-transform: uppercase;
+    font-family: "Kiona Regular", sans-serif;
+    text-align: left;
+  }
+  .information {
+    background-color: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .principalSlider {
+    height: 125vh;
+  }
+  .captionSlider {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
