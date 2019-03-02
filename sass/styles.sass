@@ -104,6 +104,24 @@ img
     position: relative
     &:hover
       transform: translateY(-10px)
+  
+  #message
+    position: fixed
+    z-index: -99
+    top: 0
+    left: 0
+    right: 0
+    opacity: 0
+    transition: all ease-in .4s
+    background-color: #47d382
+    color: $whiteColor
+    padding: 20px 0
+    text-align: center
+  
+  .fadeIn
+    opacity: 1!important
+    z-index: 20!important
+    transition: all ease-in .4s
 
 @media all and (min-width: 1025px)
   header
