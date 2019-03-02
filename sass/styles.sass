@@ -6,6 +6,8 @@ body
 
 .backgroundColor_blue
   background-color: $blue2
+.backgroundColor_blue2
+  background-color: $blue
 
 .backgroundColor_blueSky
   background-color: $blueSky
@@ -16,17 +18,26 @@ body
 .blueColor2
   color: $blue2
 
+.skyColor
+  color: $blueSky
+
 .fontTitle
   font-family: $fontTitle
 
 .fontBodyBold
   font-family: $fontBodyBold
 
+.textUppercase
+  text-transform: uppercase
+
+img
+  display: block
+
 @media all and (min-width: 1px)
   .principalSlider
     background: url('../images/slider.jpg') no-repeat center
     background-size: cover
-    height: 100vh
+    height: 120vh
     position: relative
   .captionSlider
     text-transform: uppercase
@@ -40,9 +51,51 @@ body
     right: 0
     width: 100%
     padding: 20px 0
+  .textBox,
+  .buttonBox
+    font-family: $fontBody
+    margin: 5px 0
+  .textBox
+    padding: 15px 12px
+    &::placeholder
+      color: $blue
+  .buttonBox
+    background-color: $blue
+    border: 0px
+    color: $whiteColor
+    cursor: pointer
+    padding: 15px 12px
+    text-align: center
+  .treatmentsList
+    li
+      position: relative
+      padding: 5px 20px
+      &::before
+        content: '>'
+        position: absolute
+        top: 5px
+        left: 0
+        bottom: 5px
+        margin: auto 0
+  .rss
+    border: 1px solid $whiteColor
+    padding: 0
+    text-align: center
+    width: 2vw
+    height: 2vw
+    min-width: 35px
+    min-height: 35px
+    border-radius: 50%
+    margin: 0 5px
+    position: relative
+    &:hover
+      transform: translateY(-10px)
 
 @media all and (min-width: 1025px)
   .principalSlider
     height: 125vh
   .captionSlider
     text-align: center
+  .buttonBox
+    text-align: left
+    padding: 9px 12px

@@ -27,6 +27,10 @@ body {
   background-color: #1A78BD;
 }
 
+.backgroundColor_blue2 {
+  background-color: #2B388F;
+}
+
 .backgroundColor_blueSky {
   background-color: #D1E7F2;
 }
@@ -39,6 +43,10 @@ body {
   color: #1A78BD;
 }
 
+.skyColor {
+  color: #D1E7F2;
+}
+
 .fontTitle {
   font-family: "Kiona Regular", sans-serif;
 }
@@ -47,11 +55,19 @@ body {
   font-family: "MyriadPro Bold", sans-serif;
 }
 
+.textUppercase {
+  text-transform: uppercase;
+}
+
+img {
+  display: block;
+}
+
 @media all and (min-width: 1px) {
   .principalSlider {
     background: url("../images/slider.jpg") no-repeat center;
     background-size: cover;
-    height: 100vh;
+    height: 120vh;
     position: relative;
   }
   .captionSlider {
@@ -68,6 +84,62 @@ body {
     width: 100%;
     padding: 20px 0;
   }
+  .textBox,
+  .buttonBox {
+    font-family: "MyriadPro Regular", sans-serif;
+    margin: 5px 0;
+  }
+  .textBox {
+    padding: 15px 12px;
+  }
+  .textBox::-webkit-input-placeholder {
+    color: #2B388F;
+  }
+  .textBox:-ms-input-placeholder {
+    color: #2B388F;
+  }
+  .textBox::-ms-input-placeholder {
+    color: #2B388F;
+  }
+  .textBox::placeholder {
+    color: #2B388F;
+  }
+  .buttonBox {
+    background-color: #2B388F;
+    border: 0px;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 15px 12px;
+    text-align: center;
+  }
+  .treatmentsList li {
+    position: relative;
+    padding: 5px 20px;
+  }
+  .treatmentsList li::before {
+    content: '>';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    bottom: 5px;
+    margin: auto 0;
+  }
+  .rss {
+    border: 1px solid #FFFFFF;
+    padding: 0;
+    text-align: center;
+    width: 2vw;
+    height: 2vw;
+    min-width: 35px;
+    min-height: 35px;
+    border-radius: 50%;
+    margin: 0 5px;
+    position: relative;
+  }
+  .rss:hover {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
 }
 
 @media all and (min-width: 1025px) {
@@ -76,6 +148,10 @@ body {
   }
   .captionSlider {
     text-align: center;
+  }
+  .buttonBox {
+    text-align: left;
+    padding: 9px 12px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
