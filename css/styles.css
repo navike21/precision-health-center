@@ -64,8 +64,26 @@ img {
 }
 
 @media all and (min-width: 1px) {
+  header {
+    position: absolute;
+    width: 100%;
+    top: 20px;
+    z-index: 10;
+  }
+  header div {
+    position: relative;
+    right: 0;
+  }
+  header div a {
+    width: 100%;
+    min-width: 200px;
+  }
+  header div a img {
+    width: 100%;
+  }
   .principalSlider {
-    background: url("../images/slider.jpg") no-repeat center;
+    background: url("../images/slider.jpg") no-repeat;
+    background-position: 55% center;
     background-size: cover;
     height: 120vh;
     position: relative;
@@ -143,6 +161,12 @@ img {
 }
 
 @media all and (min-width: 1025px) {
+  header div {
+    right: -10vw;
+  }
+  header div a {
+    width: 16vw;
+  }
   .principalSlider {
     height: 125vh;
   }
@@ -152,6 +176,12 @@ img {
   .buttonBox {
     text-align: left;
     padding: 9px 12px;
+  }
+}
+
+@media all and (min-width: 1400px) {
+  .principalSlider {
+    background-position: 65% center;
   }
 }
 /*# sourceMappingURL=styles.css.map */

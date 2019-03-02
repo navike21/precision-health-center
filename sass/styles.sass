@@ -34,8 +34,22 @@ img
   display: block
 
 @media all and (min-width: 1px)
+  header
+    position: absolute
+    width: 100%
+    top: 20px
+    z-index: 10
+    div
+      position: relative
+      right: 0
+      a
+        width: 100%
+        min-width: 200px
+        img
+          width: 100%
   .principalSlider
-    background: url('../images/slider.jpg') no-repeat center
+    background: url('../images/slider.jpg') no-repeat
+    background-position: 55% center
     background-size: cover
     height: 120vh
     position: relative
@@ -92,6 +106,11 @@ img
       transform: translateY(-10px)
 
 @media all and (min-width: 1025px)
+  header
+    div
+      right: -10vw
+      a
+        width: 16vw
   .principalSlider
     height: 125vh
   .captionSlider
@@ -99,3 +118,7 @@ img
   .buttonBox
     text-align: left
     padding: 9px 12px
+
+@media all and (min-width: 1400px)
+  .principalSlider
+    background-position: 65% center
