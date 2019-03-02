@@ -6,7 +6,7 @@ loadDoc = (name, email, phone) => {
       console.log(this.responseText)
     }
   };
-  xhttp.open("POST", "https://precisionhealthcenters.com/sendMail/", true);
+  xhttp.open("POST", "https://precisionhealthcenters.com/sendmail/", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("name=" + name + "&email=" + email + "&phone=" + phone);
 }
