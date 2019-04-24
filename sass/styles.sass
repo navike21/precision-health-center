@@ -48,14 +48,24 @@ img
         img
           width: 100%
   .principalSlider
-    background: url('../images/slider.jpg') no-repeat
-    background-position: 55% center
-    background-size: cover
-    height: 120vh
+    height: 110vh
     position: relative
+    &::before
+      background: url('../images/slider.jpg') no-repeat
+      background-position: 55% center
+      background-size: cover
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      z-index: -1
+
+      transform: rotateY(-180deg)
   .captionSlider
-    text-transform: uppercase
-    font-family: $fontTitle
+    // text-transform: uppercase
+    // font-family: $fontTitle
     text-align: left
   .information
     background-color: rgba($whiteColor, .4)
@@ -130,10 +140,11 @@ img
       a
         width: 16vw
   .principalSlider
-    height: 125vh
+    height: 100vh
   .captionSlider
-    text-align: center
-  .buttonBox
+    text-align: right
+    font-weight: 700
+  .buttonBox 
     text-align: left
     padding: 9px 12px
 

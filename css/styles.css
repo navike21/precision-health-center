@@ -82,15 +82,24 @@ img {
     width: 100%;
   }
   .principalSlider {
+    height: 110vh;
+    position: relative;
+  }
+  .principalSlider::before {
     background: url("../images/slider.jpg") no-repeat;
     background-position: 55% center;
     background-size: cover;
-    height: 120vh;
-    position: relative;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
   }
   .captionSlider {
-    text-transform: uppercase;
-    font-family: "Kiona Regular", sans-serif;
     text-align: left;
   }
   .information {
@@ -188,10 +197,11 @@ img {
     width: 16vw;
   }
   .principalSlider {
-    height: 125vh;
+    height: 100vh;
   }
   .captionSlider {
-    text-align: center;
+    text-align: right;
+    font-weight: 700;
   }
   .buttonBox {
     text-align: left;
@@ -204,4 +214,3 @@ img {
     background-position: 65% center;
   }
 }
-/*# sourceMappingURL=styles.css.map */
