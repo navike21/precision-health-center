@@ -10,7 +10,7 @@ body
   background-color: $blue
 
 .backgroundColor_blueSky
-  background-color: $blueSky
+  background-color: rgba($blueSky,.4)
 
 .blueColor
   color: $blue
@@ -190,7 +190,50 @@ img
         margin: 0
         span
           font-size: 2rem
-      
+  .adicionalInfo
+    li
+      margin: 10px 0
+      h3
+        margin: 0 0 10px
+        font-weight: 100
+        color: $blue
+        font-size: 2.2rem
+        text-align: center
+        span
+          font-family: $fontBodyBold
+          width: 100%
+          display: block
+      img
+        width: 100%
+      p
+        width: 95%
+        margin: 10px auto 0
+        color: $blue
+  
+  .avisoGif
+    border: 2px solid $whiteColor
+    color: $blue
+    padding: 10px 
+    margin: 10px 0 0
+    text-align: center
+    position: relative
+    display: block
+    width: 100%
+    &::before
+      content: ''
+      position: absolute
+      right: 0
+      top: 0
+      bottom: 0
+      width: 40px
+      height: 100%
+      left: -20px
+      background-image: url("../images/gift.svg")
+      background-position: center
+      background-repeat: no-repeat
+    p
+      &:last-child
+        font-family: $fontBodyBold
 
 @media all and (min-width: 360px)
   .principalSlider
@@ -231,6 +274,16 @@ img
     li
       width: 47%
       border-bottom: 0
+  
+  .adicionalInfo
+    li
+      width: 45%
+      &:last-child
+        width: 100%
+  
+  .avisoGif
+    max-width: 50vw
+    margin: 2vw auto
 
 /*ipad 2*/
 @media all and (min-width: 1024px)
@@ -296,6 +349,28 @@ img
         font-family: $fontBody
         font-size: 1.6rem
         width: 100%
+  
+  .adicionalInfo
+    li
+      width: 25%
+      margin: 0
+      position: relative
+      &:last-child
+        width: 40%
+      h3
+        text-align: left
+  .wrappadicionalInfo
+    position: relative
+    margin-bottom: 5vw
+
+  .avisoGif
+    max-width: 25vw
+    margin: 2vw auto
+    position: absolute
+    padding: 1.2vw 0
+    right: 0
+    bottom: -3vw
+    font-size: 2rem
 
 @media all and (min-width: 1400px)
   .principalSlider
