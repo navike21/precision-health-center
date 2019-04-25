@@ -47,8 +47,16 @@ body {
   color: #D1E7F2;
 }
 
+.skyColor2 {
+  color: #26A9E0;
+}
+
 .fontTitle {
   font-family: "Kiona Regular", sans-serif;
+}
+
+.fontBody {
+  font-family: "MyriadPro Regular", sans-serif;
 }
 
 .fontBodyBold {
@@ -67,22 +75,21 @@ img {
   header {
     position: absolute;
     width: 100%;
-    top: 20px;
+    padding-top: 70px;
     z-index: 10;
   }
-  header div {
-    position: relative;
+  header > div {
     right: 0;
   }
-  header div a {
+  header > div a {
     width: 100%;
     min-width: 200px;
   }
-  header div a img {
+  header > div a img {
     width: 100%;
   }
   .principalSlider {
-    height: 110vh;
+    height: 150vh;
     position: relative;
   }
   .principalSlider::before {
@@ -187,14 +194,156 @@ img {
     -webkit-transition: all ease-in .4s;
     transition: all ease-in .4s;
   }
+  .dscto {
+    background-color: #26A9E0;
+    color: #FFFFFF;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px 0 5px;
+  }
+  .dscto p {
+    font-size: 1.4rem;
+    font-family: "Kiona Regular", sans-serif;
+    padding: 0;
+  }
+  .dscto p:first-child, .dscto p:nth-child(2) {
+    font-family: "MyriadPro Regular", sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+  }
+  .dscto p:nth-child(2) {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-top: -15px;
+    margin-left: 2px;
+  }
+  .dscto p:last-child {
+    margin-left: 10px;
+  }
+  .subtitlePromo {
+    margin: -1.5vw 0 0;
+    padding: 0;
+  }
+  .wrappPromo {
+    position: relative;
+    z-index: 2;
+    margin-top: -30vh;
+  }
+  .promociones {
+    margin: 20px 0;
+  }
+  .promociones li {
+    width: 100%;
+    padding: 10px 0 20px;
+    position: relative;
+    margin: 5px 0;
+    border-bottom: 1px solid #FFFFFF;
+  }
+  .promociones li:last-child {
+    border-bottom: 0;
+  }
+  .promociones li h3 {
+    font-size: 5rem;
+    letter-spacing: 2px;
+    padding: 0;
+    margin: 0;
+  }
+  .promociones li h3 span {
+    font-size: 2rem;
+  }
+}
+
+@media all and (min-width: 360px) {
+  .principalSlider {
+    height: 130vh;
+  }
+  .principalSlider::before {
+    background-position: 53% center;
+  }
+}
+
+/*ipad*/
+@media all and (min-width: 768px) {
+  .principalSlider {
+    height: 100vh;
+  }
+  header {
+    padding-top: 0;
+  }
+  header > div {
+    right: 0;
+  }
+  header > div a {
+    width: 40vw;
+    margin-top: 2vw;
+  }
+  .dscto {
+    position: relative;
+    width: 25vw;
+    padding: 7vw 1vw 2vw;
+  }
+  .dscto p {
+    width: 100%;
+    margin: 0 10px;
+    font-size: 2rem;
+  }
+  .dscto p:first-child {
+    font-size: 8rem;
+  }
+  .dscto p:nth-child(2) {
+    margin: -10px 10px 0;
+    font-size: 4rem;
+  }
+  .wrappPromo {
+    margin-top: -54vh;
+  }
+  .promociones li {
+    width: 47%;
+    border-bottom: 0;
+  }
+}
+
+/*ipad 2*/
+@media all and (min-width: 1024px) {
+  .dscto {
+    width: 22vw;
+  }
+  .dscto p {
+    font-size: 3rem;
+  }
+  .dscto p:first-child {
+    font-size: 9rem;
+  }
+  .wrappPromo {
+    margin-top: -20vh;
+  }
+  .promociones li {
+    width: 47%;
+    border-bottom: 0;
+  }
+  .body {
+    width: 25%;
+  }
 }
 
 @media all and (min-width: 1025px) {
-  header div {
-    right: -10vw;
+  header > div a {
+    width: 25vw;
   }
-  header div a {
-    width: 16vw;
+  .dscto {
+    width: 12vw;
+    padding: 5vw 1vw 2vw;
+  }
+  .dscto p {
+    font-size: 2rem;
+  }
+  .dscto p:first-child {
+    font-size: 7rem;
+  }
+  .dscto p:nth-child(2) {
+    font-size: 3rem;
   }
   .principalSlider {
     height: 100vh;
@@ -207,10 +356,40 @@ img {
     text-align: left;
     padding: 9px 12px;
   }
+  .wrappPromo {
+    margin-top: 0;
+  }
+  .promociones {
+    margin-top: 2vw;
+  }
+  .promociones li {
+    width: 30%;
+    border-top: 5px solid #FFFFFF;
+    border-bottom: 5px solid #FFFFFF;
+    height: 7vw;
+    margin: -5px 0 0;
+  }
+  .promociones li:last-child {
+    border-top: 5px solid #FFFFFF;
+    border-bottom: 5px solid #FFFFFF;
+  }
+  .promociones li p {
+    letter-spacing: 1px;
+    font-weight: 100;
+    font-family: "MyriadPro Regular", sans-serif;
+    font-size: 1.6rem;
+    width: 100%;
+  }
 }
 
 @media all and (min-width: 1400px) {
   .principalSlider {
     background-position: 65% center;
+  }
+}
+
+@media all and (min-width: 1800px) {
+  html {
+    font-size: 70%;
   }
 }
