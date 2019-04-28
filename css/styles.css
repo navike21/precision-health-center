@@ -360,6 +360,7 @@ img {
   header > div a {
     width: 40vw;
     margin-top: 2vw;
+    margin-left: 0;
   }
   .dscto {
     position: relative;
