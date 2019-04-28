@@ -307,6 +307,13 @@ img {
   .machine {
     display: none;
   }
+  footer p {
+    text-align: center;
+    width: 100%;
+  }
+  footer aside {
+    margin: 10px auto 0;
+  }
 }
 
 @media all and (min-width: 360px) {
@@ -483,6 +490,13 @@ img {
     display: block;
     width: 70% !important;
     margin: auto;
+  }
+  footer p {
+    text-align: center;
+    width: auto;
+  }
+  footer aside {
+    margin: 0;
   }
 }
 
