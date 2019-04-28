@@ -306,6 +306,9 @@ img {
   .avisoGif p:last-child {
     font-family: "MyriadPro Bold", sans-serif;
   }
+  .machine {
+    display: none;
+  }
 }
 
 @media all and (min-width: 360px) {
@@ -453,7 +456,7 @@ img {
   }
   .adicionalInfo li h3 {
     text-align: left;
-    position: '';
+    position: relative;
   }
   .adicionalInfo li h3::before {
     content: '>';
@@ -473,6 +476,15 @@ img {
     right: 0;
     bottom: -3vw;
     font-size: 2rem;
+  }
+  .machine {
+    position: absolute;
+    left: -6vw;
+    top: 0;
+    bottom: 0;
+    display: block;
+    width: 70% !important;
+    margin: auto;
   }
 }
 

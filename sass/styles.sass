@@ -238,6 +238,9 @@ img
     p
       &:last-child
         font-family: $fontBodyBold
+  
+  .machine
+    display: none
 
 @media all and (min-width: 360px)
   .principalSlider
@@ -364,7 +367,7 @@ img
         width: 40%
       h3
         text-align: left
-        position: ''
+        position: relative
         &::before
           content: '>'
           position: absolute
@@ -383,6 +386,15 @@ img
     right: 0
     bottom: -3vw
     font-size: 2rem
+
+  .machine
+    position: absolute
+    left: -6vw
+    top: 0
+    bottom: 0
+    display: block
+    width: 70%!important
+    margin: auto
 
 @media all and (min-width: 1400px)
   .principalSlider
