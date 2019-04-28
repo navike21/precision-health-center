@@ -122,9 +122,12 @@ img {
   .buttonBox {
     font-family: "MyriadPro Regular", sans-serif;
     margin: 5px 0;
+    border: 0;
+    min-height: 63px;
+    font-size: 1.5rem;
   }
   .textBox {
-    padding: 15px 12px;
+    padding: 0 12px;
   }
   .textBox::-webkit-input-placeholder {
     color: #2B388F;
@@ -143,7 +146,7 @@ img {
     border: 0px;
     color: #FFFFFF;
     cursor: pointer;
-    padding: 15px 12px;
+    padding: 0 12px;
     text-align: center;
   }
   .treatmentsList li {
@@ -275,6 +278,7 @@ img {
     width: 95%;
     margin: 10px auto 0;
     color: #2B388F;
+    font-size: 1.4rem;
   }
   .avisoGif {
     border: 2px solid #FFFFFF;
@@ -412,8 +416,8 @@ img {
     font-weight: 700;
   }
   .buttonBox {
-    text-align: left;
-    padding: 9px 12px;
+    text-align: center;
+    padding: 0 12px;
   }
   .wrappPromo {
     margin-top: 0;
@@ -436,7 +440,7 @@ img {
     letter-spacing: 1px;
     font-weight: 100;
     font-family: "MyriadPro Regular", sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     width: 100%;
   }
   .adicionalInfo li {
@@ -449,13 +453,20 @@ img {
   }
   .adicionalInfo li h3 {
     text-align: left;
+    position: '';
+  }
+  .adicionalInfo li h3::before {
+    content: '>';
+    position: absolute;
+    left: -1.5vw;
+    top: .3vw;
   }
   .wrappadicionalInfo {
     position: relative;
     margin-bottom: 5vw;
   }
   .avisoGif {
-    max-width: 25vw;
+    max-width: 28vw;
     margin: 2vw auto;
     position: absolute;
     padding: 1.2vw 0;
@@ -471,8 +482,8 @@ img {
   }
 }
 
-@media all and (min-width: 1800px) {
+@media all and (min-width: 1500px) {
   html {
-    font-size: 70%;
+    font-size: 75%;
   }
 }
