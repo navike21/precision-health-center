@@ -58,7 +58,7 @@ img
     position: relative
     &::before
       background: url('../images/slider1.jpg') no-repeat
-      background-position: 55% center
+      background-position: 45% center
       background-size: cover
       content: ''
       position: absolute
@@ -68,11 +68,10 @@ img
       right: 0
       z-index: -1
 
-      // transform: rotateY(-180deg)
   .captionSlider
-    // text-transform: uppercase
-    // font-family: $fontTitle
     text-align: left
+    margin-top: 30vh
+
   .information
     background-color: rgba($whiteColor, .4)
     position: absolute
@@ -81,6 +80,7 @@ img
     right: 0
     width: 100%
     padding: 20px 0
+
   .textBox,
   .buttonBox
     font-family: $fontBody
@@ -88,10 +88,12 @@ img
     border: 0
     min-height: 63px
     font-size: 1.5rem
+
   .textBox
     padding: 0 12px
     &::placeholder
       color: $blue
+
   .buttonBox
     background-color: $blue
     border: 0px
@@ -99,6 +101,7 @@ img
     cursor: pointer
     padding: 0 12px
     text-align: center
+
   .treatmentsList
     li
       position: relative
@@ -110,6 +113,7 @@ img
         left: 0
         bottom: 5px
         margin: auto 0
+
   .rss
     border: 1px solid $whiteColor
     padding: 0
@@ -150,6 +154,7 @@ img
     right: 0
     width: 100%
     padding: 10px 0 5px
+
     p
       font-size: 1.4rem
       font-family: $fontTitle
@@ -253,7 +258,28 @@ img
   .principalSlider
     height: 130vh
     &::before
-      background-position: 53% center
+      background-position: 41% center
+  
+  .captionSlider
+    margin-top: 40vh
+  
+  header
+    > div
+      a
+        width: 80%
+        margin-left: 30%
+
+@media all and (min-width: 470px)
+  header
+    > div
+      a
+        width: 40%
+        margin-left: 60%
+  .principalSlider
+    height: 160vh
+
+  .captionSlider
+    margin-top: 20vh
 
 /*ipad*/
 @media all and (min-width: 768px)
