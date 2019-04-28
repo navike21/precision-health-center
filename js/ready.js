@@ -5,7 +5,8 @@ loadDoc = () => {
   let message = document.getElementById("message");
   let dataComplete = false;
 
-  if(fullname.value !== "" && email.value !== "" && phone.value !== ""){
+  // if(fullname.value !== "" && email.value !== "" && phone.value !== ""){
+  if(fullname.value !== "" && email.value !== ""){
   
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
