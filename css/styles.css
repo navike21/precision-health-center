@@ -93,7 +93,7 @@ img {
     position: relative;
   }
   .principalSlider::before {
-    background: url("../images/slider.jpg") no-repeat;
+    background: url("../images/slider1.jpg") no-repeat;
     background-position: 55% center;
     background-size: cover;
     content: '';
@@ -103,8 +103,6 @@ img {
     left: 0;
     right: 0;
     z-index: -1;
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
   }
   .captionSlider {
     text-align: left;
