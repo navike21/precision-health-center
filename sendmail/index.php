@@ -64,6 +64,7 @@
               <td heigh="20" >&nbsp;</td>
             </tr>
           </table>
+          </table>
         </body>
         </html>
       ';
