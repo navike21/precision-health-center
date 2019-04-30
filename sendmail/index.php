@@ -4,13 +4,13 @@
   $nombre  = $_POST["name"];
   $correo  = $_POST["email"];
   $asunto  = "Contact from web";
-  $telefono = $_POST['phone'];
+  $services = $_POST['services'];
   $mensaje = "";
   echo "cualquiercosa";
   
   echo $nombre;
   
-  if($nombre != "" && $correo != "" && $telefono != ""){
+  if($nombre != "" && $correo != "" && $services != ""){
 
       $registro = date("Y-m-d H:i:s");
       
@@ -56,7 +56,7 @@
               <td>
                 <p style="margin: 5px 30px; font-weight: 700; olor:black;">'.$nombre.'</p>
                 <p style="margin: 5px 30px 10px; font-size: 14px; olor:black;">Email:&nbsp; '.$correo.'</p>
-                <p style="margin: 5px 30px 10px; font-size: 14px; olor:black;">Teléfono:&nbsp; '.$telefono.'</p>
+                <p style="margin: 5px 30px 10px; font-size: 14px; olor:black;">Service:&nbsp; '.$services.'</p>
               </td>
             </tr>
             <tr>
