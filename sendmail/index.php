@@ -15,8 +15,8 @@
       $registro = date("Y-m-d H:i:s");
       
     
-      //$to = 'ivan@navike21.com';
-      $to = 'info@precisionhealthcenters.com';
+      $to = 'ivan@navike21.com';
+      // $to = 'info@precisionhealthcenters.com';
     
       $subject = 'New contact from web - '.$registro;
     
