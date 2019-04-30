@@ -15,8 +15,8 @@
       $registro = date("Y-m-d H:i:s");
       
     
-      $to = 'ivan@navike21.com';
-      // $to = 'info@precisionhealthcenters.com';
+      // $to = 'ivan@navike21.com';
+      $to = 'info@precisionhealthcenters.com';
     
       $subject = 'New contact from web - '.$registro;
     
@@ -36,7 +36,6 @@
           <title>Document</title>
         </head>
         <body style="background-color:#2B388F;">
-          <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" valign="middle" style="border-collapse: collapse; font-family: Arial; color: #808080; font-weight: 200; background-color:#2B388F; position: absolute; height:100%; top: 0px; bottom: 0px; left:0px;">
             <table width="600" border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse; font-family: Arial; color: #808080; font-weight: 200; background-color:#fff;">
               <tr>
                 <td style="background-color:#fff" height="5">&nbsp;</td>
@@ -64,7 +63,6 @@
                 <td heigh="20" >&nbsp;</td>
               </tr>
             </table>
-          </table>
         </body>
         </html>
       ';
