@@ -10,7 +10,7 @@ loadDoc = () => {
   if(fullname.value !== "" && email.value !== ""){
   
     let xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = () => {
+    xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
         message.classList.add("fadeIn")
         setTimeout(() => {
@@ -28,7 +28,7 @@ loadDoc = () => {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Handler when the DOM is fully loaded
   let formData = document.getElementById('formData');
   formData.addEventListener("submit", loadDoc, true);
