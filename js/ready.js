@@ -17,7 +17,7 @@ loadDoc = () => {
           message.classList.remove("fadeIn");
           fullname.value = "";
           email.value = "";
-          phone.value = "";
+          services.value = "";
         }, 2500);
       }
     };

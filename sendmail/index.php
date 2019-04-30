@@ -36,34 +36,34 @@
           <title>Document</title>
         </head>
         <body style="background-color:#2B388F;">
-        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" valign="middle" style="border-collapse: collapse; font-family: Arial; color: #808080; font-weight: 200; background-color:#2B388F; position: absolute; height:100%; top: 0px; bottom: 0px; left:0px;">
-          <table width="600" border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse; font-family: Arial; color: #808080; font-weight: 200; background-color:#fff;">
-            <tr>
-              <td style="background-color:#fff" height="5">&nbsp;</td>
-            </tr>
-            <tr>
-              <td style="background-color:#ffffff">
-                &nbsp;&nbsp;&nbsp;<img style="margin: 15px;" src="https://precisionhealthcenters.com/images/isologo.png" alt="Logo" width="110">
-              </td>
-            </tr>
-            <tr><td heigh="10" >&nbsp;</td></tr>
-            <tr>
-              <td align="center">
-                <h2 style="padding: 10px 0px; color:black;">New Contact from web</h2>
-              </td>
-            </tr>
-            <tr><td heigh="10" >&nbsp;</td></tr>
-            <tr>
-              <td>
-                <p style="margin: 5px 30px; font-weight: 700; color:#2B388F; font-size: 18px;">Name:&nbsp;'.$nombre.'</p>
-                <p style="margin: 5px 30px 10px; font-size: 14px; color:black;">Email:&nbsp; '.$correo.'</p>
-                <p style="margin: 5px 30px 10px; font-size: 14px; color:black;">Service:&nbsp; '.$services.'</p>
-              </td>
-            </tr>
-            <tr>
-              <td heigh="20" >&nbsp;</td>
-            </tr>
-          </table>
+          <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" valign="middle" style="border-collapse: collapse; font-family: Arial; color: #808080; font-weight: 200; background-color:#2B388F; position: absolute; height:100%; top: 0px; bottom: 0px; left:0px;">
+            <table width="600" border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse; font-family: Arial; color: #808080; font-weight: 200; background-color:#fff;">
+              <tr>
+                <td style="background-color:#fff" height="5">&nbsp;</td>
+              </tr>
+              <tr>
+                <td style="background-color:#ffffff">
+                  &nbsp;&nbsp;&nbsp;<img style="margin: 15px;" src="https://precisionhealthcenters.com/images/isologo.png" alt="Logo" width="110">
+                </td>
+              </tr>
+              <tr><td heigh="10" >&nbsp;</td></tr>
+              <tr>
+                <td align="center">
+                  <h2 style="padding: 10px 0px; color:black;">New Contact from web</h2>
+                </td>
+              </tr>
+              <tr><td heigh="10" >&nbsp;</td></tr>
+              <tr>
+                <td>
+                  <p style="margin: 5px 30px; font-weight: 700; color:#2B388F; font-size: 18px;">Name:&nbsp;'.$nombre.'</p>
+                  <p style="margin: 5px 30px 10px; font-size: 14px; color:black;">Email:&nbsp; '.$correo.'</p>
+                  <p style="margin: 5px 30px 10px; font-size: 14px; color:black;">Service:&nbsp; '.$services.'</p>
+                </td>
+              </tr>
+              <tr>
+                <td heigh="20" >&nbsp;</td>
+              </tr>
+            </table>
           </table>
         </body>
         </html>
