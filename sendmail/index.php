@@ -35,7 +35,7 @@
           <meta http-equiv="X-UA-Compatible" content="ie=edge">
           <title>Document</title>
         </head>
-        <body style="background-color:#f2f2f2">
+        <body style="background-color:#2B388F">
           <table width="600" border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse; font-family: Arial; color: #808080; font-weight: 200; background-color:#fff;">
             <tr>
               <td style="background-color:#fff" height="5">&nbsp;</td>
@@ -54,9 +54,9 @@
             <tr><td heigh="10" >&nbsp;</td></tr>
             <tr>
               <td>
-                <p style="margin: 5px 30px; font-weight: 700; olor:black;">'.$nombre.'</p>
-                <p style="margin: 5px 30px 10px; font-size: 14px; olor:black;">Email:&nbsp; '.$correo.'</p>
-                <p style="margin: 5px 30px 10px; font-size: 14px; olor:black;">Service:&nbsp; '.$services.'</p>
+                <p style="margin: 5px 30px; font-weight: 700; color:#2B388F; font-size: 18px;">'.$nombre.'</p>
+                <p style="margin: 5px 30px 10px; font-size: 14px; color:black;">Email:&nbsp; '.$correo.'</p>
+                <p style="margin: 5px 30px 10px; font-size: 14px; color:black;">Service:&nbsp; '.$services.'</p>
               </td>
             </tr>
             <tr>
