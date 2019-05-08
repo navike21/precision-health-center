@@ -6,9 +6,9 @@
   $asunto  = "Contact from web";
   $services = $_POST['services'];
   $mensaje = "";
-  echo "cualquiercosa";
+  // echo "cualquiercosa";
   
-  echo $nombre;
+  // echo $nombre;
   
   if($nombre != "" && $correo != "" && $services != ""){
 
@@ -23,8 +23,6 @@
       $headers = "From: Precision Health Center <".strip_tags("info@precisionhealthcenters.com").">\r\n";
       $headers .= "MIME-Version: 1.0\r\n";
       $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-    
-    
     
       $message = '
         <!DOCTYPE html>
