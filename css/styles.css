@@ -224,6 +224,7 @@ img {
   }
   .dscto p:last-child {
     margin-left: 10px;
+    width: 55%;
   }
   .subtitlePromo {
     margin: -1.5vw 0 0;
@@ -379,6 +380,9 @@ img {
   .dscto p:nth-child(2) {
     margin: -10px 10px 0;
     font-size: 4rem;
+  }
+  .dscto p:last-child {
+    width: 100%;
   }
   .wrappPromo {
     margin-top: -54vh;
