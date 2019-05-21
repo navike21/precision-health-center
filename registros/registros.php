@@ -64,39 +64,30 @@
 				<thead>
 					<tr>
 						<th width="20">#</th>
-						<th>Apellidos y Nombres</th>
-						<th>Dirección</th>
-						<th>Teléfono</th>
-						<th>Correo</th>
-						<th>Hijos</th>
-						<th>Fecha de Registro</th>
+						<th>Fullname</th>
+						<th>Email</th>
+						<th>Services</th>
+						<th>Date TIme</th>
 					</tr>
 				</thead>
 				<tbody>
 					<?php
-						$consulta = "SELECT * FROM quinde_ica_juerga_celestial ORDER BY apellidos ASC";
+						$consulta = "SELECT * FROM registros ORDER BY idregistro ASC";
 						$sql = mysqli_query($link, $consulta);
 						$row = mysqli_num_rows($sql);
 						$a = 1;
 						for ($i=0; $i < $row; $i++) {
 							$col = mysqli_fetch_array($sql, MYSQLI_ASSOC);
-							$apellidos = $col["apellidos"];
-							$nombres = $col["nombres"];
-							$direccion = $col["direccion"];
-							$telefono = $col["telefono"];
-							$correo = $col["correo"];
-							//$fecha_nac = $col["fecha_nac"];
-							$hijos = $col["tienes_hijos"];
-							$fecha_registro = $col["fecha_registro"];
+							$fullname = $col["fullname"];
+							$email = $col["email"];
+							$services = $col["services"];
+							$fechaRegistro = $col["fechaRegistro"];
 							echo '<tr>
 								<td style="text-align:center;">'.$a.'</td>
-								<td>'.strtoupper($apellidos).' '.strtoupper($nombres).'</td>
-								<td>'.strtoupper($direccion).'</td>
-								<td>'.$telefono.'</td>
-								<td>'.strtolower($correo).'</td>
-								
-								<td style="text-align:center;">'.strtolower($hijos).'</td>
-								<td style="text-align:center;">'.$fecha_registro.'</td>
+								<td>'.strtoupper($fullname).'</td>
+								<td>'.strtolower($email).'</td>
+								<td>'.$services.'</td>
+								<td>'.$fechaRegistro.'</td>
 							</tr>';
 							$a++;
 						}
@@ -105,12 +96,10 @@
 				<tfoot>
 					<tr>
 						<th width="20">#</th>
-						<th>Apellidos y Nombres</th>
-						<th>Dirección</th>
-						<th>Teléfono</th>
-						<th>Correo</th>
-						<th>Hijos</th>
-						<th>Fecha de Registro</th>
+						<th>Fullname</th>
+						<th>Email</th>
+						<th>Services</th>
+						<th>Date TIme</th>
 					</tr>
 				</tfoot>
 			</table>
