@@ -15,8 +15,8 @@
 	$link -> query($consulta);
   
   if($nombre != "" && $correo != "" && $services != ""){
-    $to = 'ivan@navike21.com';
-    // $to = 'info@precisionhealthcenters.com';
+    // $to = 'ivan@navike21.com';
+    $to = 'info@precisionhealthcenters.com';
   
     $subject = 'New contact from web - '.$registro;
   
