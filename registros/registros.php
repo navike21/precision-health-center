@@ -57,8 +57,7 @@
 	<body>
 		<div class="w_100 section_middle_center" style="height:100vh;">
 			<div class="active w_90 section_top_center">
-				<a class="btn_default" href="excel2.php" target="_parent" style="width:200px;">Exportar a Excel Windows</a>
-				<a class="btn_default" href="excel.php" target="_parent" style="width:200px;">Exportar a Excel Mac</a>
+				<a class="btn_default" href="excel.php" target="_parent" style="width:200px;">Export to Excel</a>
 			</div>
 			<table id="example" data-seccion="distrito" class="hover table table-striped table-bordered display compact" cellspacing="0" width="100%" align="center">
 				<thead>
@@ -72,7 +71,7 @@
 				</thead>
 				<tbody>
 					<?php
-						$consulta = "SELECT * FROM registros ORDER BY idregistro ASC";
+						$consulta = "SELECT * FROM registros ORDER BY idregistro DESC";
 						$sql = mysqli_query($link, $consulta);
 						$row = mysqli_num_rows($sql);
 						$a = 1;
@@ -87,7 +86,7 @@
 								<td>'.strtoupper($fullname).'</td>
 								<td>'.strtolower($email).'</td>
 								<td>'.$services.'</td>
-								<td>'.$fechaRegistro.'</td>
+								<td style="text-align:center;">'.$fechaRegistro.'</td>
 							</tr>';
 							$a++;
 						}
