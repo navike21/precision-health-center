@@ -106,9 +106,13 @@ img {
   .buttonBox {
     font-family: "MyriadPro Regular", sans-serif;
     margin: 5px 0;
+    border: 0;
+    min-height: 55px;
+    font-size: 1.5rem;
+    color: #2B388F;
   }
   .textBox {
-    padding: 15px 12px;
+    padding: 0 12px;
   }
   .textBox::-webkit-input-placeholder {
     color: #2B388F;
@@ -127,7 +131,7 @@ img {
     border: 0px;
     color: #FFFFFF;
     cursor: pointer;
-    padding: 15px 12px;
+    padding: 0 12px;
     text-align: center;
   }
   .treatmentsList li {
@@ -178,6 +182,29 @@ img {
     -webkit-transition: all ease-in .4s;
     transition: all ease-in .4s;
   }
+  footer p {
+    text-align: center;
+    width: 100%;
+  }
+  footer aside {
+    margin: 10px auto 0;
+  }
+}
+
+/*Ipad*/
+@media all and (min-width: 760px) {
+  .captionSlider {
+    font-size: 4rem;
+  }
+  .information a {
+    font-size: 3rem;
+  }
+  .information p {
+    font-size: 3rem;
+  }
+  .information p a {
+    font-size: 5rem;
+  }
 }
 
 @media all and (min-width: 1025px) {
@@ -194,13 +221,35 @@ img {
     text-align: center;
   }
   .buttonBox {
-    text-align: left;
+    text-align: center;
     padding: 9px 12px;
+  }
+  .information a {
+    font-size: 2rem;
+  }
+  .information p {
+    font-size: 2rem;
+  }
+  .information p a {
+    font-size: 4rem;
+  }
+  footer p {
+    text-align: center;
+    width: auto;
+  }
+  footer aside {
+    margin: 0;
   }
 }
 
 @media all and (min-width: 1400px) {
   .principalSlider {
     background-position: 65% center;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  header > div {
+    max-width: 50%;
   }
 }
