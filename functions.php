@@ -46,9 +46,28 @@
     return $urls;
   }
 
+  /**
+ * Crear nuestros menús gestionables desde el
+ * administrador de Wordpress.
+ */
+  function menuPrincipal() {
+    register_nav_menus(
+      array(
+        'navegation' => __( 'Header menu' ),
+        'navegation_footer' => __( 'Footer menu' )
+      )
+    );
+  }
+  add_action( 'init', 'menuPrincipal' );
 
+  /**
+ * Insertar archivos css y js 
+ */
   function custom_css(){
-    wp_enqueue_style('bastemp', get_bloginfo('template_url')."/assets/css/bastemp.min.css", false, '1.1.2', 'all');
+    wp_enqueue_style('bastemp', get_bloginfo('template_url')."/assets/css/bastemp.min.css", false, '1.0', 'all');
+    wp_enqueue_style('styles', get_bloginfo('template_url')."/assets/css/styles.min.css", false, '1.0', 'all');
   }
   add_action( 'wp_print_styles', 'custom_css' );
+
+
 ?>
