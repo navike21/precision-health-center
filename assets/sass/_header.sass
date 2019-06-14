@@ -1,0 +1,57 @@
+@media all and (min-width: 1px)
+  header
+    position: relative
+    top: 0
+    line-height: 1.05
+    .logo
+      width: 60%
+      position: relative
+      a
+        background-color: $whiteColor
+        display: block
+        position: relative
+        z-index: 2
+      h1
+        position: absolute
+        z-index: 1
+        font-size: .2rem
+        top: 0
+        bottom: 0
+        margin: auto
+    .main-nav
+      position: fixed
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      z-index: 3
+      display: none
+    .hamburguer
+      font-size: 2.5rem
+      position: fixed
+      z-index: 3
+      right: 5%
+      color: $blue2Color
+
+@media all and (min-width: 1025px)
+  header
+    position: fixed
+    .logo
+      width: 18%
+    .main-nav
+      display: block
+      position: relative
+      ul
+        @include section_middle_center
+        li
+          a
+            padding: 8px 15px
+            color: $blue2Color
+        .current-menu-item
+          a
+            color: $whiteColor
+            background-color: $orangeColor
+            border-radius: 6px
+    .hamburguer
+      display: none
+// @media all and (min-width: 1400px)

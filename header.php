@@ -9,10 +9,26 @@
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon.ico" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul class="main-nav">
+    <header class="section_middle_center w_100">
+      <section class="w_90 section_middle_justify">
+        <div class="logo">
+            <?php
+              if ( has_custom_logo() ) {
+                  if ( function_exists( 'the_custom_logo' ) ) {
+                    the_custom_logo();
+                  }
+                  else{
+                    echo '<a href="'.get_option( 'siteurl' ).'"><img src="'.get_stylesheet_directory_uri().'/assets/images/logo.svg" title="'.get_bloginfo( 'name' ).'" /></a>';
+                  }
+              } else {
+                  echo '<h1>'. get_bloginfo( 'name' ) .'</h1>';
+                  echo '<a href="'.get_option( 'siteurl' ).'"><img src="'.get_stylesheet_directory_uri().'/assets/images/logo.svg" title="'.get_bloginfo( 'name' ).'" /></a>';
+              }
+            ?>
+        </div>
+        <nav class="main-nav">
           <?php wp_nav_menu( array( 'theme_location' => 'navegation' ) ); ?>
-        </ul>
-      </nav>
+        </nav>
+        <a class="hamburguer"> <i class="fas fa-bars"></i> </a>
+      </section>
     </header>
