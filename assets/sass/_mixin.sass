@@ -1,0 +1,19 @@
+@mixin border-radius($numero)
+  border-radius: $numero
+
+@mixin placeholder-color($color, $style)
+  &::-webkit-input-placeholder
+    color: $color
+    font-style: $style
+  &:-moz-placeholder
+    color: $color
+    font-style: $style
+  &::-moz-placeholder
+    color: $color
+    font-style: $style
+  &:-ms-input-placeholder
+    color: $color
+    font-style: $style
+
+@mixin transition($seconds)
+  transition: all ease-in-out $seconds

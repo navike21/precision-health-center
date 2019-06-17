@@ -1,32 +1,31 @@
-loadDoc = () => {
-  let fullname = document.getElementById('fullname');
-  let email = document.getElementById('email');
-  let phone = document.getElementById('phone');
-  let message = document.getElementById("message");
-  let dataComplete = false;
+openMenu = (elm) =>{
+  let icon = elm.getElementsByTagName('i');
+  icon[0].classList.toggle('fa-bars');
+  icon[0].classList.toggle('fa-times');
 
-  if(fullname.value !== "" && email.value !== "" && phone.value !== ""){
+  let navigation = document.getElementsByClassName('main-nav');
+  navigation[0].classList.toggle('activeNav');
+}
+
+sliderHome = () =>{
+  var sliderHome = document.getElementsByClassName('sliderHome')[0];
+  var wrappItemsSlider = sliderHome.getElementsByClassName('wrappItemsSlider')[0];
+  var itemsSlider = sliderHome.querySelectorAll('.wrappItemsSlider > .itemSlider');
   
-    let xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-        message.classList.add("fadeIn")
-        setTimeout(() => {
-          message.classList.remove("fadeIn");
-          fullname.value = "";
-          email.value = "";
-          phone.value = "";
-        }, 2500);
-      }
-    };
-    xhttp.open("POST", "../sendmail/", true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("name=" + fullname.value + "&email=" + email.value + "&phone=" + phone.value);
+  var anchoSliderWrapp = parseInt(itemsSlider.length) * 100;
+  wrappItemsSlider.style.width = anchoSliderWrapp+'vw';
+
+  var dotsSlider = document.getElementsByClassName('dotsSlider')[0];
+  for (let i = 0; i < itemsSlider.length; i++) {
+    var dotSlider = document.createElement('button');
+    dotSlider.classList.add('dot');
+    if(i === 0){
+      dotSlider.classList.add('activeDot');
+    }
+    dotsSlider.appendChild(dotSlider);
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Handler when the DOM is fully loaded
-  let formData = document.getElementById('formData');
-  formData.addEventListener("submit", loadDoc, true);
-});
+window.onload = ()=>{
+  sliderHome();
+}

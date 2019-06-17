@@ -1,0 +1,41 @@
+.sliderHome
+  position: relative
+  margin-top: 10vw
+  overflow: hidden
+  width: 100%
+  .dotsSlider
+    position: absolute
+    top: 2vw
+    left: 5vw
+    z-index: 3
+    .dot
+      background-color: $blue2Color
+      padding: 0
+      margin: 2px
+      width: 1.5vw
+      height: 1.5vw
+      min-width: 15px
+      min-height: 15px
+      border: 0
+      cursor: pointer
+      @include border-radius(50%)
+    .activeDot
+      background-color: $orangeColor
+  .wrappItemsSlider
+    @include section_middle_left
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+    .itemSlider
+      width: 100vw
+      overflow: hidden
+      height: 40vw
+      @include section_middle_center
+      img
+        display: block
+        margin: 0
+        width: 100%

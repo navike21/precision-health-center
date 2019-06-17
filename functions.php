@@ -69,7 +69,13 @@
     wp_enqueue_style('styles', get_bloginfo('template_url')."/assets/css/styles.min.css", false, '1.0', 'all');
   }
   add_action( 'wp_print_styles', 'custom_css' );
-
+  
+  function custom_js(){
+    wp_deregister_script( 'scripts' );
+    wp_register_script( 'scripts', get_bloginfo('template_url').'/assets/js/ready.js', false, '1.0', false);
+    wp_enqueue_script( 'scripts' );
+  }
+  add_action( 'wp_enqueue_scripts', 'custom_js' );
 
   /**LOGO WEB */
   function custom_logo() {
@@ -79,22 +85,54 @@
         'flex-height' => true,
         'flex-width'  => true,
         'header-text' => array( 'site-title', 'site-description' ),
-    ) );
-}
-add_action( 'after_setup_theme', 'custom_logo' );
-
-
-  function mis_widgets(){
-    register_sidebar(
-      array(
-        'name'          => __( 'Sidebar' ),
-        'id'            => 'sidebar',
-        'before_widget' => '<div class="widget">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h3>',
-        'after_title'   => '</h3>',
-      )
-    );
+    ));
   }
-  add_action('init','mis_widgets');
+  add_action( 'after_setup_theme', 'custom_logo' );
+
+  /**SLIDER HOME WIDGET */
+  function sliderHome() {
+    register_sidebar( array(
+      'name'          => __('Slider Home'),
+      'id'            => 'sliderHome',
+      'before_widget' => '<div class="sliderHome w_100">',
+      'after_widget'  => '</div>'
+    ));
+  }
+  add_action( 'widgets_init', 'sliderHome' );
+
+  /* FEATURED IMAGE*/
+  add_theme_support( 'post-thumbnails' );
+
+  /**SLIDER HOME PAGE */
+  add_action( 'init', 'custom_page_slider' );
+  function custom_page_slider() {
+    $label_slider = array(
+      'name'                  => _x( 'Slider home', 'post type general name' ),
+      'singular_name'         => _x( 'Slider', 'post type singular name' ),
+      'add_new'               => _x( 'Add new slider', 'book' ),
+      'add_new_item'          => __( 'Add new slider' ),
+      'edit_item'             => __( 'Edit slider' ),
+      'new_item'              => __( 'New slider' ),
+      'view_item'             => __( 'See slider' ),
+      'search_items'          => __( 'Search slider' ),
+      'not_found'             => __( 'Slider not found' ),
+      'not_found_in_trash'    => __( 'Slider not found in the trash' ),
+      'parent_item_colon'     => ''
+    );
+  
+    // Creamos un array para $args
+    $args_slider = array( 'labels' => $label_slider,
+      'public'                => true,
+      'publicly_queryable'    => true,
+      'show_ui'               => true,
+      'query_var'             => true,
+      'rewrite'               => true,
+      'menu_icon'             => 'dashicons-images-alt2',
+      'capability_type'       => 'post',
+      'hierarchical'          => false,
+      'menu_position'         => 4,
+      'supports'              => array( 'title', 'thumbnail' )
+    );
+    register_post_type( 'slider', $args_slider ); /* Registramos y a funcionar */
+  }
 ?>
