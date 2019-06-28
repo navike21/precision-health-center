@@ -64,30 +64,32 @@
     z-index: 99
     width: 100%
     background-color: $whiteColor
-    .logo
-      width: 18%
-      margin: 0
-    .main-nav
-      display: block
-      position: relative
-      z-index: 4
-      opacity: 1
-      .menu-menu-principal-container
-        ul
-          @include section_middle_center
-          li
-            a
-              padding: 8px 15px
-              color: $blue2Color
-              &:hover
-                color: $blueColor
-          .current-menu-item
-            a
-              color: $whiteColor
-              background-color: $orangeColor
-              border-radius: 6px
-              &:hover
+    > section
+      @include section_bottom_justify
+      .logo
+        width: 18%
+        margin: 0
+      .main-nav
+        display: block
+        position: relative
+        z-index: 4
+        opacity: 1
+        .menu-menu-principal-container
+          ul
+            @include section_middle_center
+            li
+              a
+                padding: 8px 15px
+                color: $blue2Color
+                &:hover
+                  color: $blueColor
+            .current-menu-item
+              a
                 color: $whiteColor
+                background-color: $orangeColor
+                border-radius: 6px
+                &:hover
+                  color: $whiteColor
     .hamburguer
       display: none
 // @media all and (min-width: 1400px)

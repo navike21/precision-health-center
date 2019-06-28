@@ -66,7 +66,7 @@
   function custom_css(){
     wp_enqueue_style('bastemp', get_bloginfo('template_url')."/assets/css/bastemp.min.css", false, '1.0', 'all');
     wp_enqueue_style('font awesome', get_bloginfo('template_url')."/assets/css/font-awesome.min.css", false, '1.0', 'all');
-    wp_enqueue_style('styles', get_bloginfo('template_url')."/assets/css/styles.min.css", false, '1.0', 'all');
+    wp_enqueue_style('styles', get_bloginfo('template_url')."/assets/css/styles.min.css", false, '1.1', 'all');
   }
   add_action( 'wp_print_styles', 'custom_css' );
   
@@ -89,16 +89,36 @@
   }
   add_action( 'after_setup_theme', 'custom_logo' );
 
-  /**SLIDER HOME WIDGET */
-  function sliderHome() {
-    register_sidebar( array(
-      'name'          => __('Slider Home'),
-      'id'            => 'sliderHome',
-      'before_widget' => '<div class="sliderHome w_100">',
-      'after_widget'  => '</div>'
-    ));
+  /**WIDGETS */
+  add_action( 'widgets_init', 'my_awesome_sidebar' );
+  function my_awesome_sidebar() {
+    $my_sidebars = array(
+      array(
+        'name'          => 'Slider home',
+        'id'            => 'sliderHome',
+        'description'   => 'Insert here a plugin slider for home web',
+        'before_widget' => '<div class="w_100 section_middle_center">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="hideElement">',
+        'after_title'   => '</h2>',
+      ),
+      array(
+        'name'          => 'Contact info home',
+        'id'            => 'contact-info-home',
+        'description'   => 'Contact information from home web after slider home',
+        'before_widget' => '<div class="wrapp_enlace section_middle_center">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="hideElement">',
+        'after_title'   => '</h2>',
+        'class'         => 'infoHome'
+      ) 
+    );
+
+    foreach( $my_sidebars as $sidebar ) {
+      $args = wp_parse_args( $sidebar );
+      register_sidebar( $args );
+    }
   }
-  add_action( 'widgets_init', 'sliderHome' );
 
   /* FEATURED IMAGE*/
   add_theme_support( 'post-thumbnails' );
@@ -135,4 +155,3 @@
     );
     register_post_type( 'slider', $args_slider ); /* Registramos y a funcionar */
   }
-?>

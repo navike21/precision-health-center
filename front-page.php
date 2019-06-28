@@ -1,6 +1,6 @@
 <?php
   get_header();
-  /**Slider principal */
+  /**Slider principal*/
   if ( is_active_sidebar( 'sliderHome' ) ) {
     dynamic_sidebar( 'sliderHome' );
   }
@@ -23,5 +23,12 @@
     endwhile;
     echo '</div></section>';
   }
+  /**End Slider*/
+
+  echo '<section>';
+  if ( is_active_sidebar( 'contact-info-home' ) ) {
+    dynamic_sidebar( 'contact-info-home' );
+  }
+  echo '</section>';
   get_footer();
 ?>
