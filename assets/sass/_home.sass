@@ -45,6 +45,56 @@
           margin: 0
           width: auto
           height: 100%
+    
+  .info_home
+    .textwidget
+      padding: 20px 0
+      @include section_middle_center
+      p
+        color: $blueColor
+        padding: 0
+        margin: 0
+        display: block
+        font-size: $movilTextMedium
+        a
+          color: $blueColor
+        &:nth-child(2)
+          font-size: $movilTextGigant
+          position: relative
+          margin-left: 10vw
+          &::before
+            content: ''
+            width: 8.5vw
+            height: 8.5vw
+            position: absolute
+            background-image: url('../images/whatsapp.svg')
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+            top: 0
+            bottom: 2.2vw
+            margin: auto
+            left: -10vw
+  
+  .frmHome
+    padding: 20px 0
+    h2
+      font-size: $movilTextBig
+      line-height: 1
+      margin-bottom: 5vw
+    form
+      input,
+      select
+        font-size: $movilTextNormal
+      button
+        background-color: $blueColor
+        border: 0
+        color: $whiteColor
+        padding: 3vw 0
+        letter-spacing: .4vw
+        font-size: $movilTextNormal
+        font-weight: 700
+        text-transform: uppercase
 
 @media all and (min-width: 1025px)
   .sliderHome

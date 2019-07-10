@@ -410,6 +410,7 @@
     display: block;
     color: #1A78BD;
     padding: 10px;
+    font-size: 5vw;
   }
   header .main-nav .menu-menu-principal-container .current-menu-item a {
     color: #EF8B46;
@@ -613,6 +614,77 @@
     width: auto;
     height: 100%;
   }
+  .info_home .textwidget {
+    padding: 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .info_home .textwidget p {
+    color: #2B388F;
+    padding: 0;
+    margin: 0;
+    display: block;
+    font-size: 5vw;
+  }
+  .info_home .textwidget p a {
+    color: #2B388F;
+  }
+  .info_home .textwidget p:nth-child(2) {
+    font-size: 13vw;
+    position: relative;
+    margin-left: 10vw;
+  }
+  .info_home .textwidget p:nth-child(2)::before {
+    content: '';
+    width: 8.5vw;
+    height: 8.5vw;
+    position: absolute;
+    background-image: url("../images/whatsapp.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    bottom: 2.2vw;
+    margin: auto;
+    left: -10vw;
+  }
+  .frmHome {
+    padding: 20px 0;
+  }
+  .frmHome h2 {
+    font-size: 8vw;
+    line-height: 1;
+    margin-bottom: 5vw;
+  }
+  .frmHome form input,
+  .frmHome form select {
+    font-size: 3.5vw;
+  }
+  .frmHome form button {
+    background-color: #2B388F;
+    border: 0;
+    color: #FFFFFF;
+    padding: 3vw 0;
+    letter-spacing: .4vw;
+    font-size: 3.5vw;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
 }
 
 @media all and (min-width: 1025px) {
@@ -667,6 +739,18 @@ body {
 
 .hideElement {
   display: none;
+}
+
+.whiteColor {
+  color: #FFFFFF;
+}
+
+.align_center {
+  text-align: center;
+}
+
+.font_light {
+  font-weight: 100;
 }
 
 img {

@@ -106,7 +106,7 @@
         'name'          => 'Contact info home',
         'id'            => 'contact-info-home',
         'description'   => 'Contact information from home web after slider home',
-        'before_widget' => '<div class="wrapp_enlace section_middle_center">',
+        'before_widget' => '<div class="info_home section_middle_justify w_90">',
         'after_widget'  => '</div>',
         'before_title'  => '<h2 class="hideElement">',
         'after_title'   => '</h2>',
@@ -153,5 +153,47 @@
       'menu_position'         => 4,
       'supports'              => array( 'title', 'thumbnail' )
     );
-    register_post_type( 'slider', $args_slider ); /* Registramos y a funcionar */
+    /* Registramos y a funcionar */
+    register_post_type( 'slider', $args_slider );
   }
+
+
+  /**Añadir Secciones de páginas personalizadas */
+
+  add_action( 'init', 'custom_page_services' );
+  function custom_page_services() {
+	$labelServices = array(
+    'name'                  => _x( 'Services', 'post type general name' ),
+    'singular_name'         => _x( 'service', 'post type singular name' ),
+    'add_new'               => _x( 'Add new service', 'book' ),
+    'add_new_item'          => __( 'Add new service' ),
+    'edit_item'             => __( 'Edit service' ),
+    'new_item'              => __( 'New service' ),
+    'view_item'             => __( 'See service' ),
+    'search_items'          => __( 'Search service' ),
+    'not_found'             => __( 'service not found' ),
+    'not_found_in_trash'    => __( 'service not found in the trash' ),
+    'parent_item_colon'     => ''
+    );
+ 
+    // Creamos un array para $args
+    $args_services = array( 'labels' => $labelServices,
+      'public'                => true,
+      'show_ui'               => true,
+      'show_in_nav_menus'     => true,
+      'show_in_menu'          => true,
+      'query_var'             => true,
+      'publicly_queryable'    => true,
+      'rewrite'               => true,
+      'exclude_from_search'   => false,
+      'menu_icon'             => 'dashicons-yes-alt',
+      'menu_position'         => 5,
+      'capability_type'       => 'post',
+      'hierarchical'          => false,
+      'menu_position'         => null,
+      'supports'              => array( 'title', 'editor', 'thumbnail' )
+    );
+ 
+    register_post_type( 'services', $args_services ); /* Registramos y a funcionar */
+  }
+?>
